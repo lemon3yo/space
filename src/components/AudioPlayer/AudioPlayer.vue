@@ -10,7 +10,7 @@
       title: 'WE',
       coverImage: pk
     }" />
-    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -18,7 +18,7 @@ import { defineProps, watch } from 'vue'
 import AudioPlayer from 'vue3-audio-player'
 import 'vue3-audio-player/dist/style.css'
 import mp3 from '@/assets/audio/we.mp3'
-import pk from '@/assets/pk.png'
+import pk from '@/assets/img/pk.png'
 
 interface IProps {
   start: boolean
@@ -28,8 +28,7 @@ const props = defineProps<IProps>()
 watch(props.start, (now) => {
   if (now) {
     AudioPlayer.play()
-  }
-  if (!now) {
+  } else {
     AudioPlayer.pause()
   }
 })
@@ -37,18 +36,18 @@ watch(props.start, (now) => {
 </script>
 
 <style lang="scss" scoped>
-audio {
-  display: block;
-  width: 80vw;
-  margin: 0 auto;
+// audio {
+//   display: block;
+//   width: 80vw;
+//   margin: 0 auto;
 
-  &::-webkit-media-controls-panel {
-    background-color: transparent;
-  }
-
-}
-// .audio-container {
-//   width: 20vw;
-//   background-color: #fff;
+//   &::-webkit-media-controls-panel {
+//     background-color: transparent;
+//   }
 // }
+.audio-container {
+  width: 60vw;
+  height: 10vh;
+  margin: 0 auto;
+}
 </style>
