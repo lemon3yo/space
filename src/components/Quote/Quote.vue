@@ -44,7 +44,7 @@ function handleClick (e) {
   } else if (e.target.innerText === '星') {
     if (lighted.liao && lighted.wen) {
       lighted.xin = true
-      alert('廖文星成功点亮宇宙！')
+      alert('廖文馨成功点亮宇宙！')
     }
   } else {
     lighted.liao = false
