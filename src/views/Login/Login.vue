@@ -53,7 +53,7 @@ const submitForm = (formEl: FormInstance | undefined) => {
   formEl.validate((valid) => {
     if (valid) {
       console.log('submit!')
-      if (formItems.pass === '20190827') {
+      if (formItems.pass === '20190827' || formItems.pass === '520') {
         router.push('/home')
       }
     } else {
