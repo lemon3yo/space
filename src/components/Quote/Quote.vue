@@ -2,16 +2,16 @@
   <Space v-if="(lighted.xin || lighted.er)"/>
   <div class="quote-container noselect" @click="handleClick">
     <h1 :class="{lightup: (lighted.xin || lighted.er)}">
-      <span>闪</span>亮未来
+      <span :class="{lightup: lighted.shan && !lighted.xin && !lighted.er}">闪</span>亮未来
     </h1>
     <h1 :class="{lightup: (lighted.xin || lighted.er)}">
-      <span>瞭</span><span>望</span>宇宙
+      <span :class="{lightup: lighted.liao && !lighted.xin && !lighted.er}">瞭</span><span :class="{lightup: lighted.wan && !lighted.xin && !lighted.er}">望</span>宇宙
     </h1>
     <h1 :class="{lightup: (lighted.xin || lighted.er)}">
-     只为<span>温</span>暖
+     只为<span :class="{lightup: lighted.wen && !lighted.xin && !lighted.er}">温</span>暖
     </h1>
     <h1 :class="{lightup: (lighted.xin || lighted.er)}">
-     幻<span>而</span>光明的<span>星</span>河
+     幻<span :class="{lightup: lighted.er && !lighted.xin && !lighted.er}">而</span>光明的<span :class="{lightup: lighted.xin && !lighted.xin && !lighted.er}">星</span>河
     </h1>
     <!-- <button @click="lightText">请不要点我</button> -->
   </div>
